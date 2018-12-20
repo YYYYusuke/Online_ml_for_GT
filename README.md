@@ -1,2 +1,1 @@
-# GT_ML
-# Online_ml_for_GT
+# Scripts of Online_ml_for_GT
