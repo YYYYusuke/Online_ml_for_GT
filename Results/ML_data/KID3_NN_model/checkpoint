@@ -1,0 +1,2 @@
+model_checkpoint_path: "KID3_NN_model.ckpt"
+all_model_checkpoint_paths: "KID3_NN_model.ckpt"

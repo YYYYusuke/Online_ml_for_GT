@@ -1,0 +1,5 @@
+model_checkpoint_path: "/home/nakajo/GT_Kids/Results/ML_data/vailidation_ver1/ml_data/KID9_NN_model/KID9_NN_model.ckpt"
+all_model_checkpoint_paths: "./KID7_NN_model.ckpt"
+all_model_checkpoint_paths: "/home/nakajo/GT_Kids/Results/ML_data/vailidation_ver1/ml_data/KID7_NN_model/KID7_NN_model.ckpt"
+all_model_checkpoint_paths: "./KID9_NN_model.ckpt"
+all_model_checkpoint_paths: "/home/nakajo/GT_Kids/Results/ML_data/vailidation_ver1/ml_data/KID9_NN_model/KID9_NN_model.ckpt"
