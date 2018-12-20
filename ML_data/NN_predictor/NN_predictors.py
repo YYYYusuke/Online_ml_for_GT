@@ -18,12 +18,12 @@ def MakeInputData(df_KID, KID_NAME):
 if __name__=="__main__":
 
     # Need to build system that gets temperature by gRPC based communication below
-
-    df_KID1_ml=pd.read_pickle("/home/nakajo/GT_Kids/Results/ML_data/vailidation_ver1/ml_data/df_KID1_ml.pkl")
-    df_KID3_ml=pd.read_pickle("/home/nakajo/GT_Kids/Results/ML_data/vailidation_ver1/ml_data/df_KID3_ml.pkl")
-    df_KID7_ml=pd.read_pickle("/home/nakajo/GT_Kids/Results/ML_data/vailidation_ver1/ml_data/df_KID7_ml.pkl")
-    df_KID9_ml=pd.read_pickle("/home/nakajo/GT_Kids/Results/ML_data/vailidation_ver1/ml_data/df_KID9_ml.pkl")
-    df_KID11_ml=pd.read_pickle("/home/nakajo/GT_Kids/Results/ML_data/vailidation_ver1/ml_data/df_KID11_ml.pkl")
+    path="/nethome/ynakajo6/GT_ML/ML_data"
+    df_KID1_ml=pd.read_pickle(path+"/vailidation_ver1/ml_data/df_KID1_ml.pkl")
+    df_KID3_ml=pd.read_pickle(path+"/vailidation_ver1/ml_data/df_KID3_ml.pkl")
+    df_KID7_ml=pd.read_pickle(path+"/vailidation_ver1/ml_data/df_KID7_ml.pkl")
+    df_KID9_ml=pd.read_pickle(path+"/vailidation_ver1/ml_data/df_KID9_ml.pkl")
+    df_KID11_ml=pd.read_pickle(path+"/vailidation_ver1/ml_data/df_KID11_ml.pkl")
     
     # Initiating NN prediction model object
     NN_KID1_model=NN_KID_model("KID1")

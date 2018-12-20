@@ -1,10 +1,5 @@
-# This script it written for reading original data from the database storing pkl files and convert it 
-# into the data which can be used as machine learnign training data.
-
 import pandas as pd
-import numpy as np
-import os
-import seaborn as sns
+import numpy as np import os import seaborn as sns
 from datetime import datetime
 import pickle
 import sys
@@ -41,11 +36,10 @@ def MakeDataForML(Table, KID_NAME):
 
 if __name__=='__main__':
 
-    path="/home/nakajo/GT_Kids/Results/ML_data/"
+    path="/nethome/ynakajo6/GT_ML/"
     args=sys.argv
     print("Inport folder name is:", args[1])
     Folder_name=args[1]
-
 
     print("Reading data .................")
     KID1_table_RR=pd.read_pickle(path+Folder_name+"/KID1_RR.pkl")
@@ -71,8 +65,7 @@ if __name__=='__main__':
     os.chdir(path+Folder_name)
     os.makedirs("ml_data")
     KID1_ml_data.to_pickle(path+Folder_name+"/ml_data/df_KID1_ml.pkl")
-    KD3_ml_data.to_pickle(path+Folder_name+"/ml_data/df_KID3_ml.pkl")
+    KID3_ml_data.to_pickle(path+Folder_name+"/ml_data/df_KID3_ml.pkl")
     KID7_ml_data.to_pickle(path+Folder_name+"/ml_data/df_KID7_ml.pkl")
     KID9_ml_data.to_pickle(path+Folder_name+"/ml_data/df_KID9_ml.pkl")
     KID11_ml_data.to_pickle(path+Folder_name+"/ml_data/df_KID11_ml.pkl")
-

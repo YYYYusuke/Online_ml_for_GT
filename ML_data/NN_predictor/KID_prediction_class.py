@@ -2,10 +2,9 @@
 import pandas as pd
 import numpy as np
 import os
-import matplotlib.pyplot as plt
 from datetime import datetime
 import time
-from sklearn.metrics import mean_squared_error
+#from sklearn.metrics import mean_squared_error
 import tensorflow as tf
 import sys
 
@@ -17,9 +16,8 @@ class NN_KID_model:
 
 
     def predict(self, X):
-
         tf.reset_default_graph()
-        path="/home/nakajo/GT_Kids/Results/ML_data/vailidation_ver1/ml_data/"
+        path="/nethome/ynakajo6/GT_ML/ML_data/vailidation_ver1/ml_data/"
         nInput=5
         nOutput=2
         epoch=10000
