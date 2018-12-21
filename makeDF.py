@@ -76,8 +76,8 @@ def MoveToFolder(Folder_name, path):
 
     for pklfile in files:
         shutil.move(path+pklfile, path+Folder_name)
-
-    os.chdir(path+Folder_name)
+    
+    shutil.move(Folder_name, "/nethome/ynakajo6/GT_ML/ML_data/dB_pd/")
 
 
 if __name__ == '__main__':

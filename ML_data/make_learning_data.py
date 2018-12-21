@@ -37,23 +37,24 @@ def MakeDataForML(Table, KID_NAME):
 
 if __name__=='__main__':
 
-    path="/nethome/ynakajo6/GT_ML/"
+    path_dBpd="/nethome/ynakajo6/GT_ML/ML_data/dB_pd/"
+    path_dBml="/nethome/ynakajo6/GT_ML/ML_data/dB_ml/"
     args=sys.argv
     print("Inport folder name is:", args[1])
     Folder_name=args[1]
 
     print("Reading data .................")
-    KID1_table_RR=pd.read_pickle(path+Folder_name+"/KID1_RR.pkl")
-    KID3_table_RR=pd.read_pickle(path+Folder_name+"/KID3_RR.pkl")
-    KID7_table_RR=pd.read_pickle(path+Folder_name+"/KID7_RR.pkl")
-    KID9_table_RR=pd.read_pickle(path+Folder_name+"/KID9_RR.pkl")
-    KID11_table_RR=pd.read_pickle(path+Folder_name+"/KID11_RR.pkl")
-    KID1_serve_time_RR=pd.read_pickle(path+Folder_name+"/KID1_serve_time_RR.pkl")
-    KID3_serve_time_RR=pd.read_pickle(path+Folder_name+"/KID3_serve_time_RR.pkl")
-    KID7_serve_time_RR=pd.read_pickle(path+Folder_name+"/KID7_serve_time_RR.pkl")
-    KID9_serve_time_RR=pd.read_pickle(path+Folder_name+"/KID9_serve_time_RR.pkl")
-    KID11_serve_time_RR=pd.read_pickle(path+Folder_name+"/KID11_serve_time_RR.pkl")
-    df_jobs_RR=pd.read_pickle(path+Folder_name+"/df_jobs_RR.pkl")
+    KID1_table_RR=pd.read_pickle(path_dBpd+Folder_name+"/KID1_RR.pkl")
+    KID3_table_RR=pd.read_pickle(path_dBpd+Folder_name+"/KID3_RR.pkl")
+    KID7_table_RR=pd.read_pickle(path_dBpd+Folder_name+"/KID7_RR.pkl")
+    KID9_table_RR=pd.read_pickle(path_dBpd+Folder_name+"/KID9_RR.pkl")
+    KID11_table_RR=pd.read_pickle(path_dBpd+Folder_name+"/KID11_RR.pkl")
+    KID1_serve_time_RR=pd.read_pickle(path_dBpd+Folder_name+"/KID1_serve_time_RR.pkl")
+    KID3_serve_time_RR=pd.read_pickle(path_dBpd+Folder_name+"/KID3_serve_time_RR.pkl")
+    KID7_serve_time_RR=pd.read_pickle(path_dBpd+Folder_name+"/KID7_serve_time_RR.pkl")
+    KID9_serve_time_RR=pd.read_pickle(path_dBpd+Folder_name+"/KID9_serve_time_RR.pkl")
+    KID11_serve_time_RR=pd.read_pickle(path_dBpd+Folder_name+"/KID11_serve_time_RR.pkl")
+    df_jobs_RR=pd.read_pickle(path_dBpd+Folder_name+"/df_jobs_RR.pkl")
     
     print("Processing data..................")
     KID1_ml_data=MakeDataForML(KID1_table_RR, "KID1")
@@ -62,11 +63,11 @@ if __name__=='__main__':
     KID9_ml_data=MakeDataForML(KID9_table_RR, "KID9")
     KID11_ml_data=MakeDataForML(KID11_table_RR, "KID11")
 
-    print("Exporting dataframe .............")
-    os.chdir(path+Folder_name)
-    os.makedirs("ml_data")
-    KID1_ml_data.to_pickle(path+Folder_name+"/ml_data/df_KID1_ml.pkl")
-    KID3_ml_data.to_pickle(path+Folder_name+"/ml_data/df_KID3_ml.pkl")
-    KID7_ml_data.to_pickle(path+Folder_name+"/ml_data/df_KID7_ml.pkl")
-    KID9_ml_data.to_pickle(path+Folder_name+"/ml_data/df_KID9_ml.pkl")
-    KID11_ml_data.to_pickle(path+Folder_name+"/ml_data/df_KID11_ml.pkl")
+    print("Exporting training dataframe .............")
+    #os.chdir(path_dBml)
+    #os.makedirs("ml_data")
+    KID1_ml_data.to_pickle(path_dBml+"/df_KID1_ml.pkl")
+    KID3_ml_data.to_pickle(path_dBml+"/df_KID3_ml.pkl")
+    KID7_ml_data.to_pickle(path_dBml+"/df_KID7_ml.pkl")
+    KID9_ml_data.to_pickle(path_dBml+"/df_KID9_ml.pkl")
+    KID11_ml_data.to_pickle(path_dBml+"/df_KID11_ml.pkl")

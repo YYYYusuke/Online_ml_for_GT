@@ -102,6 +102,7 @@ def OnlineLearning(df_KID, KID_NAME):
     learning_time=time.time()-start
     print("Learning time:", learning_time)
     print("W_fc1 : %s" % W_fc1.eval())
+    os.chdir("/nethome/ynakajo6/GT_ML/ML_data/dB_NN_model/")
     save_path_local=saver.save(sess, './'+KID_NAME+'_NN_model/'+KID_NAME+'_NN_model.ckpt')
     #save_path_vali=saver.save(sess, '/home/nakajo/GT_Kids/Results/ML_data/vailidation_ver1/ml_data/KID1_NN_model/KID1_NN_model.ckpt')
     print("Model saved in path: %s" % os.getcwd()+save_path_local)
@@ -118,7 +119,7 @@ def OnlineLearning(df_KID, KID_NAME):
 if __name__=='__main__':
 
     # Training
-    path="/nethome/ynakajo6/GT_ML/ML_data/data_5_ver1/ml_data/"
+    path_dBml="/nethome/ynakajo6/GT_ML/ML_data/dB_ml/"
     df_KID1_ml=pd.read_pickle(path+"df_KID1_ml.pkl")
     df_KID3_ml=pd.read_pickle(path+"df_KID3_ml.pkl")
     df_KID7_ml=pd.read_pickle(path+"df_KID7_ml.pkl")
